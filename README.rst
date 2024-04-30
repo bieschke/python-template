@@ -1,7 +1,7 @@
-GHP HQ, Inc. Repository Template
-================================
+Eric Bieschke Repository Template
+=================================
 
-This repository is a template repository for GHP HQ, Inc.
+This repository is a template repository for Eric Bieschke.
 
 
 Code Repository
