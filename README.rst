@@ -26,10 +26,6 @@ Code Repository
     # dependencies
     pip install -r requirements.txt
 
-    # set env vars
-    cp .env.template .env
-    vi .env
-
     # run locally
     python -m main
 
