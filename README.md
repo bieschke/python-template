@@ -20,3 +20,32 @@ linting and formatting. All code lives in `src/` and is tested with pytest to
    ```bash
    uv run pytest
    ```
+
+## Linting and type checking
+
+Use [Ruff](https://github.com/astral-sh/ruff) for linting/formatting and
+[Mypy](https://mypy-lang.org/) for static type checking:
+
+```bash
+uv run ruff check --fix .
+uv run mypy .
+```
+
+## Pre-commit hooks
+
+A `.pre-commit-config.yaml` is included. Install the hooks so they run
+automatically on each commit:
+
+```bash
+pre-commit install
+pre-commit run --all-files  # optional, run on entire repo
+```
+
+## Releasing
+
+Update the version in `pyproject.toml`, then build and upload the distribution:
+
+```bash
+uv run python -m build
+uv run twine upload dist/*
+```
