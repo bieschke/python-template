@@ -32,10 +32,10 @@ build-backend = "setuptools.build_meta"
 [dependency-groups]
 dev = [
     "ruff==0.11.10",
-    "pytest>=7.4",
-    "pytest-cov>=4.0",
+    "pytest==7.4.0",
+    "pytest-cov==4.0.0",
     "mypy==1.15.0",
-    "pre-commit>=3.3",
+    "pre-commit==3.3.0",
     "types-python-dateutil",
 ]
 

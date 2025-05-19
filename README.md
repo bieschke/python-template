@@ -12,7 +12,8 @@ linting and formatting. All code lives in `src/` and is tested with pytest to
 
    ```bash
    uv venv
-   uv pip install -e ".[dev]"
+   # Install project and dev dependencies from the `dev` group
+   uv pip install -e . --group dev
    ```
 
 3. Run the tests:
@@ -20,6 +21,12 @@ linting and formatting. All code lives in `src/` and is tested with pytest to
    ```bash
    uv run pytest
    ```
+
+## Dependency management
+
+All project and development dependencies are pinned in `pyproject.toml` to
+ensure the versions installed in CI match what gets deployed. Update these pins
+whenever you want to upgrade packages.
 
 ## Linting and type checking
 
