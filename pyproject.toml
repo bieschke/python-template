@@ -1,0 +1,61 @@
+[project]
+name = "project_name"
+version = "0.1.0"
+description = "Short project description here."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["template", "uv", "ruff", "pytest"]
+
+# Project dependencies
+dependencies = []
+
+optional-dependencies = {}
+
+[project.scripts]
+# "project-name-cli" = "project_name.cli:main"
+
+[build-system]
+requires = ["setuptools>=67.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+
+[dependency-groups]
+dev = [
+    "ruff==0.11.10",
+    "pytest>=7.4",
+    "pytest-cov>=4.0",
+    "mypy==1.15.0",
+    "pre-commit>=3.3",
+    "types-python-dateutil",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+extend-select = ["B"]
+ignore = []
+exclude = [".venv", "__pycache__", "build", "dist"]
+fix = true
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = false
+check_untyped_defs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--strict-markers --disable-warnings --cov=project_name --cov-report=term-missing --cov-fail-under=100"
