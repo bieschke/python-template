@@ -20,4 +20,3 @@ uv pip install -e ".[dev]"
 uv pip list
 
 echo "✅  Environment ready – no further internet access required."
-
