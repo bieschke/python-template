@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies (via uv)
         run: |
           uv venv
-          uv pip install -e ".[dev]"
+          uv pip install -e . --group dev
 
       - name: Run Ruff (Lint & Format Check)
         run: uv run ruff check .
