@@ -40,6 +40,17 @@ preview = true
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = ["CPY001", "D203", "D213"]
+per-file-ignores = {"tests/**" = [
+    "S101",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+]}
 
 [tool.mypy]
 python_version = "3.13"
