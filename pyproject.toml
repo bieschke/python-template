@@ -8,12 +8,6 @@ authors = [
     { name = "Your Name", email = "you@example.com" }
 ]
 requires-python = ">=3.13"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.13",
-    "Operating System :: OS Independent",
-]
-keywords = ["template", "uv", "ruff", "pytest"]
 
 # Project dependencies
 dependencies = []
@@ -56,5 +50,5 @@ disallow_untyped_defs = true
 no_implicit_optional = true
 
 [tool.pytest.ini_options]
-minversion = "7.0"
+minversion = "8.3"
 addopts = "--strict-markers --disable-warnings --cov=project_name --cov-report=term-missing --cov-fail-under=100"
