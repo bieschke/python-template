@@ -18,37 +18,31 @@ optional-dependencies = {}
 # "project-name-cli" = "project_name.cli:main"
 
 [build-system]
-requires = ["setuptools>=80.0", "wheel>=0.45.1"]
+requires = ["setuptools>=80.7.1", "wheel>=0.45.1"]
 build-backend = "setuptools.build_meta"
 
 [tool.uv]
 
 [dependency-groups]
 dev = [
-    "ruff==0.11.10",
-    "pytest==8.3.5",
-    "pytest-cov==6.1.1",
-    "mypy==1.15.0",
-    "pre-commit==4.2.0",
-    "types-python-dateutil==2.9.0.20250516",
+    "mypy",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "types-python-dateutil",
 ]
 
 [tool.ruff]
-target-version = "py313"
-line-length = 88
-extend-select = ["B"]
-ignore = []
-exclude = [".venv", "__pycache__", "build", "dist"]
 fix = true
+preview = true
+
+[tool.ruff.lint]
+select = ["ALL"]
 
 [tool.mypy]
 python_version = "3.13"
 strict = true
-ignore_missing_imports = false
-check_untyped_defs = true
-disallow_untyped_defs = true
-no_implicit_optional = true
 
 [tool.pytest.ini_options]
-minversion = "8.3"
-addopts = "--strict-markers --disable-warnings --cov=project_name --cov-report=term-missing --cov-fail-under=100"
+addopts = "--strict-markers --cov=project_name --cov-report=term-missing --cov-fail-under=100"
