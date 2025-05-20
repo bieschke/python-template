@@ -9,7 +9,10 @@ curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" | sh
 # 2 ‧ install EXACT deps from uv.lock, fail if stale
 uv sync --locked
 
-# 3 ‧ debug output
+# 3 ‧ install pre-commit hooks while we have internet
+uv run pre-commit install --install-hooks
+
+# 4 ‧ debug output
 uv pip list
 
 echo "✅ Environment ready – no further internet access required."

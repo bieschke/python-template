@@ -39,6 +39,7 @@ preview = true
 
 [tool.ruff.lint]
 select = ["ALL"]
+ignore = ["CPY001", "D203", "D213"]
 
 [tool.mypy]
 python_version = "3.13"
