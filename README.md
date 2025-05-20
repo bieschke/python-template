@@ -8,12 +8,11 @@ linting and formatting. All code lives in `src/` and is tested with pytest to
 
 1. Install [uv](https://github.com/astral-sh/uv) or run `./bootstrap.sh` which
    performs all setup steps automatically.
-2. If running manually, create a virtual environment and install dependencies:
+2. If running manually, install dependencies from `uv.lock` for a fully
+   reproducible environment:
 
    ```bash
-   uv venv
-   # Install project and dev dependencies from the `dev` group
-   uv pip install -e . --group dev
+   uv sync --locked
    ```
 
 3. Run the tests:
