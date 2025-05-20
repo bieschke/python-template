@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Install UV globally (fast)
-curl -LsSf https://astral.sh/uv/install.sh | sh
+curl -LsSf https://astral.sh/uv/0.7.6/install.sh | sh
 
 # Create an isolated virtual-env under .venv
 uv venv        # creates .venv/ and writes activation scripts
