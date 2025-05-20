@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Install UV globally (fast)
-curl -LsSf https://astral.sh/uv/0.7.6/install.sh | sh
+UV_VERSION="0.7.6"
 
-# Create an isolated virtual-env under .venv
-uv venv        # creates .venv/ and writes activation scripts
+# 1 ‧ install uv
+curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" | sh
 
-# Install project + dev dependencies inside that env
-uv pip install -e . --group dev
+# 2 ‧ install EXACT deps from uv.lock, fail if stale
+uv sync --locked
 
-# Show installed package list for debugging
+# 3 ‧ debug output
 uv pip list
 
-echo "✅  Environment ready – no further internet access required."
+echo "✅ Environment ready – no further internet access required."
