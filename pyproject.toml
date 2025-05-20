@@ -24,7 +24,7 @@ optional-dependencies = {}
 # "project-name-cli" = "project_name.cli:main"
 
 [build-system]
-requires = ["setuptools>=67.0", "wheel"]
+requires = ["setuptools>=80.0", "wheel>=0.45.1"]
 build-backend = "setuptools.build_meta"
 
 [tool.uv]
@@ -32,11 +32,11 @@ build-backend = "setuptools.build_meta"
 [dependency-groups]
 dev = [
     "ruff==0.11.10",
-    "pytest==7.4.0",
-    "pytest-cov==4.0.0",
+    "pytest==8.3.5",
+    "pytest-cov==6.1.1",
     "mypy==1.15.0",
-    "pre-commit==3.3.0",
-    "types-python-dateutil",
+    "pre-commit==4.2.0",
+    "types-python-dateutil==2.9.0.20250516",
 ]
 
 [tool.ruff]
