@@ -8,7 +8,7 @@ python -m pip install --upgrade --no-cache-dir "uv==0.7.5"
 uv venv        # creates .venv/ and writes activation scripts
 
 # -------- 3. Install project + dev dependencies inside that env --------
-uv pip install -e ".[dev]"
+uv pip install -e . --group dev
 
 # -------- 4. (Optional) pre-warm: lint, type-check, test, byte-compile ----
 # uv run ruff check --fix .
