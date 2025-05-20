@@ -24,9 +24,7 @@ jobs:
           version: "0.7.6"
 
       - name: Install dependencies (via uv)
-        run: |
-          uv venv
-          uv pip install -e . --group dev
+        run: uv sync --locked
 
       - name: Run Ruff (Lint & Format Check)
         run: uv run ruff check .
@@ -35,4 +33,4 @@ jobs:
         run: uv run mypy .
 
       - name: Run Tests (Pytest with Coverage)
-        run: uv run pytest --cov=project_name --cov-report=term --cov-fail-under=100
+        run: uv run pytest --cov=project_name --cov-report=term-missing --cov-fail-under=100
