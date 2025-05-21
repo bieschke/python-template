@@ -10,7 +10,9 @@ authors = [
 requires-python = ">=3.13"
 
 # Project dependencies
-dependencies = []
+dependencies = [
+    "flask",
+]
 
 optional-dependencies = {}
 
