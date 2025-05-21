@@ -17,9 +17,9 @@ linting and formatting. All code lives in `src/` and is tested with pytest to
 
 3. Run the tests:
 
-   ```bash
-   uv run pytest
-   ```
+```bash
+uv run pytest --cov=project_name --cov-report=term-missing --cov-fail-under=100
+```
 
 ## Dependency management
 
@@ -46,6 +46,15 @@ automatically on each commit:
 pre-commit install
 pre-commit run --all-files  # optional, run on entire repo
 ```
+
+These hooks handle formatting and lightweight checks only. Run Mypy and the
+tests yourself before committing to match the CI pipeline:
+
+```bash
+uv run mypy .
+uv run pytest --cov=project_name --cov-report=term-missing --cov-fail-under=100
+```
+CI will execute the same commands.
 
 ## Releasing
 
